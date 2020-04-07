@@ -12,9 +12,18 @@
     "@sixsprint/auth": "file:.."
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "react-app-env --env-file=config/local.env start",
+    "startdev": "react-app-env --env-file=config/dev.env start",
+    "local": "react-app-env --env-file=config/local.env build",
+    "dev": "react-app-env --env-file=config/dev.env build",
+    "qa": "react-app-env --env-file=config/qa.env build",
+    "stg": "react-app-env --env-file=config/stg.env build",
+    "uat": "react-app-env --env-file=config/uat.env build",
+    "prod": "react-app-env --env-file=config/prod.env build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-app-env": "^1.2.3"
   }
 }
